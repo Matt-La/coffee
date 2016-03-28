@@ -1,0 +1,173 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	background-color: #d9d9d9;
+	font-size: 16px;
+	line-height: 1.8;
+	text-align: center;
+}
+
+h1 {
+	/* Padding creates space on the inside of tags/elements*/
+	/* Top Left Bottom Right*/
+	padding: 200px 0 200px 0;
+}
+
+header {
+	/* Add background image onto this tag*/
+	background-image: url(../images/splash.png);
+	background-position: center bottom;
+	/* Stretches the image*/
+	background-size: cover;
+}
+
+/* menu icon - position in the top righ hand corner*/
+.trigger {
+	/* This sets up a co-ordinate position*/
+	/*Position from top or bottom and left or right from screen*/
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	display: none;
+}
+
+
+nav {
+	background-color: #FFDA0D;
+	padding: 30px 0 30px 0;
+}
+
+/* Be specific - only a tag witin a nav tag*/
+nav a {
+	/* Font color*/
+	color: #444;
+
+	/* Capitalise */
+	text-transform: uppercase;
+
+	/* Remove / change the underline*/
+	text-decoration: none;
+	font-weight: 700;
+
+	/* Adding space between links*/
+	padding: 0 20px 0 20px;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+section {
+	width: 720px;
+	background-color: #fff;
+	/* Top right Bottom Left*/
+	margin: 0 auto 0 auto;
+	padding: 40px 40px 0 40px;
+}
+
+h2 {
+
+	font-size: 35px;
+	text-transform: uppercase;
+	/* Margin on top to add space beteen the icon above and no margin below as followed by h3*/
+	margin-top: 40px 0 0 0;
+}
+
+h3 {
+	/* No margin on top as below a h2 - space below p tag*/
+	margin: 0 0 40px 0;
+	text-transform: uppercase;
+	color: a3a3a3;
+}
+
+/*,  Creates list of tags that have these rules*/
+p, blockquote {
+
+	font-size: 22px;
+	font-weight: 300;
+}
+
+/* Specific rules just for tags with a class of quote*/
+/* .represents this is the name of a class in out html*/
+.quote {
+	background-color: #ffda0d;
+}
+
+iframe {
+	width: 100%;
+}
+
+footer {
+	background-color: #ffda0d;
+	padding: 40px 0 40px 0;
+}
+
+@media screen and (max-width: 720px){
+	/* Add a set of rules that apply when the screen size is smaller than 720px*/
+	
+	h1 {
+		padding: 50px  50px 50px 50px;
+	}
+
+	img {
+		/* Percentage is relative to the tag they are inside of*/
+		max-width: 100%;
+	}
+
+	nav a{
+		/* Stack links on top of each other */
+		/* display inline - sits next to each other */
+		display: block;
+	}
+
+	section {
+		width: auto;
+
+	}
+
+	/* show menu icon on mobile services*/
+	.trigger {
+		display: block;
+	}
+
+	/*hide the navigation for mobile screens - let the user toggle the nav with the menu item*/
+
+	nav {
+		display: none;
+	} 
+}
+
+/* Styles for my about page - Gallery section*/
+
+.gallery img {
+	/* 50% of the section the images are in*/
+	width: 47%;
+	float: left;
+	/*Create space below each image*/
+	margin: 0 0 30px 0;
+}
+
+/* Tag wih class of lternate within a ag with a class of gallery*/
+.gallery .alternate {
+	/*Override the previous float left with float right*/
+	float: right;
+}
+
+.gallery p {
+	/*First tag after using floats needs to be cleared with left right or both relative to
+	what has been used above*/
+	clear: both;
+	padding-bottom: 20px;
+}
+
+/*Stack images in gallery when in mobile view*/
+@media screen and (max-width: 550px){
+	.gallery img {
+		/* Reverse float back to default behaviour*/
+		/*float: none;*/
+		/*Set with to 100% instead of 47%*/
+		width: 100%;
+	}
+
+}
